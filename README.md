@@ -17,3 +17,12 @@ The data set includes >500,000 transactions for a UK-based online retailer that 
 
 We'll walk through the logic of addressing inconsistencies in each of the variables. We'll also create additional useful features. At the end we'll have a clean, workable transactions data set to use. 
 
+## Product Focus & Recs Using Pareto, Apriori, & Associations
+
+Let's work with the retail transactions data we [cleaned and processed](https://github.com/hrishipoola/Product_Pareto_Apriori_Association), focusing on customers from Germany. We'll explore Top 10 products and apply Pareto, or the 80/20 rule, in which roughly 80% of effects come from 20% of the causes (e.g., 20% of products generate 80% of sales). This can help us focus on the core group of customers and products that generate the overwhelming majority of sales. In the future, we'll expore time series trends with this data set in more depth. 
+
+Next, we'll uncover products that are more likely to be purchased together in order to develop recommendations and bundles. As a large set of unique items creates an unmanageable number of combinations and association rules, we'll first apply the Apriori algorithm to prune item sets. Apriori is based on the principle that subsets of frequent sets are also frequent and prunes large numbers of item sets by only focusing on items that have a minimum level of support (purchase frequency). We'll also visualize how different levels of minimum support affect the number of item sets created. 
+
+Even a pruned frequent item set can generate an unruly number of association rules. Let's prune our association rules to a more manageable handful. For the pruning metric, let's choose lift, a measure of likelihood for items to co-occur. Lift is >1 for items that co-occur more than we'd expect if they were independently distributed across transactions. We'll also visualize how the number of association rules changes with increasing levels of lift criteria. We'll uncover products more likely to be purchased together that we can use to develop recommendations or bundle. Lastly, we'll visualize these associations through a heatmap and a parallel plot.  
+
+
